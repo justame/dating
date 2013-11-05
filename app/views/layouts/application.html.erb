@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="datingApp">
+<head>
+  <title>Dating</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+ 	<% if(javascript_exists?(params[:controller] +"/"+ params[:action])) %>
+  <%= javascript_include_tag( params[:controller] +"/"+ params[:action]) %>
+  <% end %>
+</head>
+<body style="background:red;height:400px;">
+<%= yield %>
+
+</body>
+</html>
