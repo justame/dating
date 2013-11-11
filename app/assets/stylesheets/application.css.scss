@@ -14,7 +14,7 @@
  /* do not change the order */
 /*@import 'variables';
 @import 'mixins';*/
-@import 'twitter/bootstrap_rtl';
+@import 'twitter/bootstrap';
 
 /* compass setup */
 $icons-sprite-dimensions: true;
@@ -24,8 +24,8 @@ $icons-layout:smart;
   vertical-align: middle;
 }
 
-@import "icons/*.png";
-@include all-icons-sprites;
+/*@import "icons/*.png";*/
+/*@include all-icons-sprites;*/
 
 /* scss for the other pages should be beneath */
 

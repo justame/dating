@@ -11,6 +11,8 @@ gem 'thin'
 gem 'rails_12factor'
 gem 'jquery-rails'
 gem "koala", "~> 1.8.0rc1"
+gem 'gon'
+gem 'rabl-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -30,7 +32,7 @@ group :development do
   gem 'xray-rails'
   gem 'pry', '~> 0.9.10'
   gem 'pry-rails'
-  # gem 'pry-doc'
+  gem 'pry-debugger'
   # gem 'pry-stack_explorer'
   # gem 'pry-exception_explorer'
 end

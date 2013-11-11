@@ -3,6 +3,7 @@
 <head>
   <title>Dating</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= include_gon %>
 	<%= javascript_include_tag "application" %>
  	<% if(javascript_exists?(params[:controller] +"/"+ params[:action])) %>
   <%= javascript_include_tag( params[:controller] +"/"+ params[:action]) %>

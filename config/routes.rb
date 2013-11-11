@@ -48,9 +48,9 @@ Dating::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  post '/welcome', :to =>'users#welcome'
-  get '/', :to => "users#sandbox"
-  get '/users/sandbox', :to => "users#sandbox"
+  post '/login', :to =>'users#login'
+  # get '/', :to => "users#sandbox"
+  # get '/users/sandbox', :to => "users#sandbox"
   # root :to => 'users#welcome'
   resources :users
 
