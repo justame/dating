@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem "koala", "~> 1.8.0rc1"
 gem 'gon'
 gem 'rabl-rails'
+gem "haml-rails", "~> 0.4"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,11 +29,12 @@ end
 
 group :development do
   gem "better_errors"
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-rails'
   gem "binding_of_caller"
   gem 'xray-rails'
-  gem 'pry', '~> 0.9.10'
-  gem 'pry-rails'
-  gem 'pry-debugger'
+  # gem 'pry-debugger'
   # gem 'pry-stack_explorer'
   # gem 'pry-exception_explorer'
 end
