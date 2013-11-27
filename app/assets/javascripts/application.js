@@ -11,6 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require angular.js
+//= require unstable/angular
 //= require core.js
 //= require app.js
