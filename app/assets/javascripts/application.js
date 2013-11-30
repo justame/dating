@@ -11,6 +11,12 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require unstable/angular
+//= require angular
+//= require angular-resource
+//= require angular-ui-router
 //= require core.js
 //= require app.js
+//= require_tree ./controllers
+//= require_tree ./directives
+//= require_tree ./services
+

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="datingApp">
-<head>
-  <title>Dating</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-	<%= include_gon %>
-	<%= javascript_include_tag "application" %>
- 	<% if(javascript_exists?(params[:controller] +"/"+ params[:action])) %>
-  <%= javascript_include_tag( params[:controller] +"/"+ params[:action]) %>
-  <% end %>
-</head>
-<body style="background:red;height:400px;">
-<%= yield %>
+<html lang="en" ng-app="datingApp">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-</body>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>

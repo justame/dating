@@ -1,3 +1,5 @@
+require "better_errors"
+
 Dating::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -34,4 +36,6 @@ Dating::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
 end

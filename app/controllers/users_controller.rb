@@ -8,13 +8,15 @@ class UsersController < ApplicationController
 	end
 
 	def index
-		@profile_images = []
+		# respond_with User.all
+		# @user = current_user
+		# @profile_images = []
 
-		albums = @user_graph.get_connection("me","albums",fields: "id,type")
-		profile_album = albums.first
-		if(profile_album.nil? == false)
-			@profile_images = @user_graph.get_connection(profile_album["id"],"photos",fields: "source, name")
-		end
+		# albums = @user_graph.get_connection("me","albums",fields: "id,type")
+		# profile_album = albums.first
+		# if(profile_album.nil? == false)
+		# 	@profile_images = @user_graph.get_connection(profile_album["id"],"photos",fields: "source, name")
+		# end
 	end
 
 	# def welcome
@@ -27,7 +29,7 @@ class UsersController < ApplicationController
 		user_access_token = session[:signed_request]["oauth_token"]
 		user_graph = Koala::Facebook::API.new(user_access_token)
 		fb_user = user_graph.get_object("me")
-
+		session["fb_user"] = fb_user
 		if (User.find_by_fb_id(fb_user["id"]).nil?)
 			register(fb_user)
 		end

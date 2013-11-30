@@ -10,24 +10,7 @@
  *
  
  */
-
- /* do not change the order */
-/*@import 'variables';
-@import 'mixins';*/
-@import 'twitter/bootstrap';
-
-/* compass setup */
-$icons-sprite-dimensions: true;
-$icons-layout:smart;
-.icons-sprite { /* general css rules for all icons */
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/*@import "icons/*.png";*/
-/*@include all-icons-sprites;*/
-
-/* scss for the other pages should be beneath */
-
-/* shared */
-/*@import  'spree/shared/all'*/
+@import "compass";
+@import "foundation_and_overrides";
+@import "shared/**";
+@import "user/**";
