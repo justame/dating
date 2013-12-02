@@ -13,6 +13,8 @@
 //= require jquery
 //= require angular
 //= require angular-resource
+//= require angular-sanitize
+//= require angular-cookies
 //= require angular-ui-router
 //= require core.js
 //= require app.js

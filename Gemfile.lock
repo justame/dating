@@ -30,6 +30,8 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.5)
     angularjs-rails (1.2.2)
+    annotate (2.5.0)
+      rake
     arel (3.0.2)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
@@ -168,6 +170,7 @@ PLATFORMS
 
 DEPENDENCIES
   angularjs-rails
+  annotate
   better_errors
   binding_of_caller
   compass-rails

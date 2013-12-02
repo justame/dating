@@ -11,6 +11,7 @@ gem "koala", "~> 1.8.0rc1"
 gem 'gon'
 gem 'rabl-rails'
 gem "haml-rails", "~> 0.4"
+gem 'annotate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

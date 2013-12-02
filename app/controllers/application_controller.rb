@@ -1,12 +1,8 @@
 class ApplicationController < ActionController::Base
-  before_filter do 
-		session[:app_oauth] ||= Koala::Facebook::OAuth.new(DatingApp.APP_ID, DatingApp.APP_SECRET)
-  end
-
+  before_filter :current_user
 	
   def current_user
-  	fb_user = session["fb_user"]
-  	User.find_by_fb_id(fb_user["id"])
+  	@current_user ||= User.where(id: params["user_id"], access_token: params["access_token"]).first
   end
 
 end

@@ -1,11 +1,10 @@
 Dating::Application.routes.draw do
   
-    resources :users
-
-    namespace :api do
-      resources :users
-    end
-
+  post '/login', :to =>'users#login'
+  # get '/', :to => "users#sandbox"
+  # get '/users/sandbox', :to => "users#sandbox"
+  # root :to => 'users#welcome'
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -56,11 +55,7 @@ Dating::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  post '/login', :to =>'users#login'
-  # get '/', :to => "users#sandbox"
-  # get '/users/sandbox', :to => "users#sandbox"
-  # root :to => 'users#welcome'
-  resources :users
+  
 
   # See how all your routes lay out with "rake routes"
 
