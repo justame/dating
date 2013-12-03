@@ -9,7 +9,10 @@
 			},
 			replace:true,
 			templateUrl: '/assets/shared/user_thumbnail.html',
-			controller: function($scope) {
+			controller: function($scope, userService) {
+				$scope.like = function(user){
+					userService.likeUser(user);
+				};
 			}
 		};
 	});

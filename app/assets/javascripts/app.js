@@ -11,7 +11,7 @@
 				'request': function(config) {
 					config.params = config.params || {};
 					config.params.access_token = $cookies.access_token;
-					config.params.user_id = $cookies.user_id;
+					config.params.uid = $cookies.user_id;
 					return config;
 				},
 				'response': function(response) {

@@ -1,8 +1,8 @@
-<div class="shared user-thumbnail">
+<div class="shared user-thumbnail" ng-class="{liked: user.liked}">
 	<strong>
 		{{user.first_name}} 
 	 	{{user.last_name}}
 	</strong>
 	<img ng-src="https://graph.facebook.com/{{user.fb_id}}/picture?type=large" alt="">
-	
+	<button ng-if="user.liked === false" ng-click="like(user)">like</button>
 </div>

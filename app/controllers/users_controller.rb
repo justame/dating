@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
 	respond_to :json, :html
-	
+	def default_serializer_options
+	  {root: false}
+	end
 	def index
+		# User.all.each |user| do 
+		# 	user.liked_by?(current_user)
+		# end
+
 		respond_with User.all
 	end
 

@@ -14,5 +14,15 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :age, :fb_id, :first_name, :last_name
+  attr_accessible :age, :fb_id, :first_name, :last_name, :liked
+  has_many :user_likes, dependent: :destroy
+
+
+  def liked_by(user)
+  	user.user_likes.where(target_user_id: self.id)
+  end
+
+  def liked_by?(user)
+  	liked_by(user).present?
+  end
 end

@@ -4,7 +4,10 @@ Dating::Application.routes.draw do
   # get '/', :to => "users#sandbox"
   # get '/users/sandbox', :to => "users#sandbox"
   # root :to => 'users#welcome'
-  resources :users
+  resources :users do
+    resources :user_likes
+  end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
